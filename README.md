@@ -1,2 +1,0 @@
-# JavascriptPaintDemo
-Created with CodeSandbox
