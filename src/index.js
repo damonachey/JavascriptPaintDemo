@@ -1,5 +1,3 @@
-import "./styles.css";
-
 const brushWidth = 20;
 const width = 400;
 const height = 400;
