@@ -20,17 +20,17 @@ document.getElementById("clear").onclick = e => {
 };
 
 function drawGrid() {
-  for (let i = 0; i < height * brushWidth; i += brushWidth) {
+  for (let i = 0; i < height + 1; i += brushWidth) {
     ctx.beginPath();
     ctx.moveTo(0, i);
-    ctx.lineTo(width * brushWidth, i);
+    ctx.lineTo(width + 1, i);
     ctx.stroke();
   }
 
-  for (let i = 0; i < width * brushWidth; i += brushWidth) {
+  for (let i = 0; i < width + 1; i += brushWidth) {
     ctx.beginPath();
     ctx.moveTo(i, 0);
-    ctx.lineTo(i, width * brushWidth);
+    ctx.lineTo(i, width  + 1);
     ctx.stroke();
   }
 }
