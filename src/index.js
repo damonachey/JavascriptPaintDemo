@@ -20,18 +20,19 @@ document.getElementById("clear").onclick = e => {
 };
 
 function drawGrid() {
-  for (let i = 0; i < height + 1; i += brushWidth) {
+  let line = (x1, y1, x2, y2) => {
     ctx.beginPath();
-    ctx.moveTo(0, i);
-    ctx.lineTo(width + 1, i);
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
     ctx.stroke();
+  };
+  
+  for (let i = 0; i < height + 1; i += brushWidth) {
+    line(0, i, width + 1, i)
   }
 
   for (let i = 0; i < width + 1; i += brushWidth) {
-    ctx.beginPath();
-    ctx.moveTo(i, 0);
-    ctx.lineTo(i, width  + 1);
-    ctx.stroke();
+    line(i, 0,i,  height + 1)
   }
 }
 
